@@ -46,5 +46,8 @@ resource "aws_instance" "web" {
   key_name                    = var.key_name
   associate_public_ip_address = true
 
-  
+  tags = {
+    Name = "example-instance"
+    Env  = "dev"
+  }
 }
